@@ -1,0 +1,24 @@
+How to Fix a Missing Network Drive
+
+Overview
+  Your network drives normally connect automatically when you log into your computer. If you open File Explorer and do not see your shared drives, follow these steps to restore your connection.
+
+Step 1: Verify Your Network Connection
+
+  1. Check your network connection in the bottom right corner of your screen to ensure you have internet access.
+  
+  2. Restart your computer. A simple reboot often forces the system to refresh your group policies and remap the drives automatically.
+
+Step 2: Manually Map the Drive If restarting does not work, you can manually reconnect the drive using File Explorer.
+
+  1. Open File Explorer and select This PC from the left navigation menu.
+  
+  2. Click the three dots icon at the top of the window, then select Map network drive.
+  
+  3. Choose an drive letter B from the dropdown menu.
+  
+  4. In the Folder box, type the network path: \\DC\Company Data
+
+  5. Check the box that says Reconnect at sign-in and click Finish.
+
+Step 3: Request IT Support If you receive an "Access Denied" error, or if the network path cannot be found, please submit a Report a system problem request through the IT Support Portal so a technician can investigate your permissions.
