@@ -46,6 +46,7 @@ July 8: Platform Configuration and SLAs
 
 July 9: Queues, Automation, and Knowledge Base  
 - Implemented three dedicated agent views: a priority queue, an SLA queue, and a general view queue. Designed automation rules to handle automatic ticket assignment and trigger SLA threshold warnings. Signed up for Confluence, authored a knowledge base article on troubleshooting network drives, and linked the space directly to JSM.
+  
   - **Challenge/Solution:** The Confluence free tier doesn't grant external visibility for linked knowledge base articles. Copied and uploaded the KB article to this repo as a raw text file instead.
  
 *Figure 3: SLA Threshold Notification*
@@ -87,7 +88,25 @@ July 10: Active Directory Administration & Helpdesk Ticket Resolution
 ![Image Failed to Load](images/ticket-2-provisioning-and-access/finance-access-granted.png)
 
 - **Ticket 3 - Network Diagnostics & PowerShell Administration:** Resolved a simulated DNS failure on a client machine. Applied a structured diagnostic methodology, using ping to test local broadcast connectivity and nslookup to definitively isolate the failure to the DNS layer. Bypassed user-level GUI restrictions by deploying an elevated PowerShell command (Set-DnsClientServerAddress -ResetServerAddresses) to restore DHCP configurations and resolve the ticket within the established SLA threshold.
+  
   - **Challenge/Solution:** While diagnosing the inaccessible network drive, I used ping on the DC/DNS/DHCP servers and it successfully went through. This was surprising because I had deliebrately broken the DNS connection. After some review, I realized that Windows uses protocols like NetBios to resolve pings through broadcasts. So instead, I used nslookup localhost to isolate the DNS as the issue.
+ 
+*Figure 14: DNS Connection Issue -> Network Drive Access Lost*
+![Image Failed to Load](images/ticket-3-dns-diagnostics/init-error.png)
+
+*Figure 15: Ticket View*
+![Image Failed to Load](images/ticket-3-dns-diagnostics/ticket-view.png)
+
+*Figure 16: Diagnostics -> ping, nslookup, ipconfig*
+![Image Failed to Load](images/ticket-3-dns-diagnostics/diagostics.png)
+
+*Figure 17: Solution -> reinstate DNS server + ipconfig /flushdns*
+![Image Failed to Load](images/ticket-3-dns-diagnostics/solution.png)
+
+*Figure 18: Network Drive Access Restored*
+![Image Failed to Load](images/ticket-3-dns-diagnostics/access-granted.png)
+
+
 
 
 
