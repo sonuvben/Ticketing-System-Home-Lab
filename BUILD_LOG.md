@@ -5,10 +5,22 @@ July 3: ServiceNow
   
 July 8: Platform Configuration and SLAs  
 - The demand for ServiceNow PDIs are just too high, so I set up a Jira Service Management environment instead.  Created the four primary request categories and established the P1-P4 priority scheme. Defined custom SLA metrics for Time to First Response, Time to Resolution, and Time to Close after resolution. Configured the calendars so the resolution timers strictly tick during standard 9-5 business hours, while the closure timer utilizes a 24/7 schedule.
+  
+*Figure 1: User Portal*
+![User Portal](images/customer-portal.png)
+
+*Figure 2: SLA Config*
+![SLA](images/SLA.png)
 
 July 9: Queues, Automation, and Knowledge Base  
 - Implemented three dedicated agent views: a priority queue, an SLA queue, and a general view queue. Designed automation rules to handle automatic ticket assignment and trigger SLA threshold warnings. Signed up for Confluence, authored a knowledge base article on troubleshooting network drives, and linked the space directly to JSM.
   - **Challenge/Solution:** The Confluence free tier doesn't grant external visibility for linked knowledge base articles. Copied and uploaded the KB article to this repo as a raw text file instead.
+ 
+*Figure 3: SLA Threshold Notification*
+![Auto SLA Notification](images/automation-sla-breach-notification.png)
+  
+*Figure 4: Ticket Queues*
+![Queues](images/custom-queues.png)
 
 July 10: Active Directory Administration & Helpdesk Ticket Resolution  
 - User Provisioning & Group Policy Management: Executed an end-to-end onboarding workflow for a new hire. Provisioned the account via Active Directory Users and Computers (ADUC) and enforced an initial password reset upon first logon for security compliance. Assigned the user to the Finance Security Group, ensuring role-based access control and the successful application of departmental Group Policy Objects (GPOs) for secure folder access.
